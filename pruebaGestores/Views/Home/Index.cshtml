@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Asignacion";
+}
+
+
+<h3>Asignación</h3>
+<div class="card-body">
+
+    <div class="col-sm-12" style="max-height: 70vh; overflow-y: auto;">
+        <table id="dgvUsuarios" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Saldos</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (pruebaGestores.Models.ModelAsignacion _model in Model)
+                {
+                    <tr>
+                        <td>@_model.Nombre</td>
+                        <td>@_model.Monto</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

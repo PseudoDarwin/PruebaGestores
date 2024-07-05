@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Saldos";
+}
+
+
+<h3>Saldos</h3>
+<div class="card-body">
+
+    <div class="col-sm-12" style="max-height: 70vh; overflow-y: auto;">
+        <table id="dgvUsuarios" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Monto</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (pruebaGestores.Models.ModelSaldo _model in Model)
+                {
+                    <tr>
+                        <td>@_model.IdSaldo</td>
+                        <td>@_model.Saldo</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
